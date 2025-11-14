@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -14,12 +14,12 @@
   (function(l) {
     if (l.search[1] === '/' ) {
       var decoded = l.search.slice(1).split('&').map(function(s) { 
-        return s.replace(/~and~/g, '&')
+        return s.replaceAll('~and~', '&')
       }).join('?');
-      window.history.replaceState(null, null,
+      globalThis.history.replaceState(null, null,
           l.pathname.slice(0, -1) + decoded + l.hash
       );
     }
-  }(window.location))
+  }(globalThis.location))
 </script>
 </html>
