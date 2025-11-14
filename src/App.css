@@ -40,3 +40,86 @@
 .read-the-docs {
   color: #888;
 }
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.file-upload input[type="file"] {
+  padding: 0.5rem;
+  border: 2px dashed #646cff;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.file-upload input[type="file"]:hover {
+  border-color: #535bf2;
+}
+
+.file-upload input[type="file"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.file-upload button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.25s;
+}
+
+.file-upload button:hover:not(:disabled) {
+  border-color: #646cff;
+}
+
+.file-upload button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.file-upload button:focus,
+.file-upload button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.error {
+  margin: 1rem 0;
+}
+
+.result {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.result textarea {
+  font-family: monospace;
+  padding: 1rem;
+  border: 1px solid #646cff;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  resize: vertical;
+}
+
+@media (prefers-color-scheme: light) {
+  .file-upload button {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+  
+  .result textarea {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
