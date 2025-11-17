@@ -1,7 +1,7 @@
 export function HydrateFallback() {
   return (
-    <div className="centerd-alone">
-      <button className="button is-loading is-ghost" /> Cargando...
+    <div className="hydrate-fallback-center">
+      <div className="hydrate-fallback-spinner" />
     </div>
   );
 }

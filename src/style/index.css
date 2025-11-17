@@ -1,3 +1,26 @@
+/* HydrateFallback Spinner Styles */
+.hydrate-fallback-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: transparent;
+}
+
+.hydrate-fallback-spinner {
+  width: 48px;
+  height: 48px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #1976d2;
+  border-radius: 50%;
+  animation: hydrate-fallback-spin 1s linear infinite;
+}
+
+@keyframes hydrate-fallback-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
