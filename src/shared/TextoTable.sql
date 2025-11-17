@@ -1,8 +1,7 @@
-<!-- 
 
 
 
-CARPETA TRIBUTARIA REGULAR
+/* CARPETA TRIBUTARIA REGULAR
                                                                                  PARA SOLICITAR CRÉDITO
                                                       Importante: Esta información es válida para la fecha y hora en que se generó la carpeta
                Toda declaración y pago que sea presentada en papel retrasa la actualización de las bases de datos del SII, por lo que, eventualmente, podrían no aparecer en esta carpeta
@@ -1013,10 +1012,7 @@ CARPETA TRIBUTARIA REGULAR
                                                               Pág. 32 / 32
 
 
- -->
-
-
-
+ */
 
  
 DELETE #TestTable WHERE campo IS null
@@ -1317,7 +1313,6 @@ WHERE ISNUMERIC(t.texto) = 1
 	    f.lineaDebito, f.lineaFacturas, f.Credito, f.TotalCredito, f.Debito, f.Facturas, getdate() FROM @Filatop f
  
 
-END 
 
 
 DECLARE @factor NUMERIC(20,13) =  52631199999 /10000000000 
