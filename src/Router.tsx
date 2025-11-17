@@ -7,14 +7,17 @@ import { authMiddleware } from "./shared/authMiddleware";
 const router = createBrowserRouter([{
   HydrateFallback : HydrateFallback,
   ErrorBoundary : ErrorBoundary,
-  middleware: [authMiddleware],
   path : "/",
+  middleware: [authMiddleware],
+  loader: async () => null,
   children : [
-    { index: true,  lazy : () => import( './pages/App' ).then( lazify ) }
+    { index: true, lazy : () => import( './pages/App' ).then( lazify )},
   ]
-},{
-  path : "/login",
-  lazy : () => import( './pages/Login' ).then( lazify )
+},{ 
+  path : "login", 
+  lazy : () => import( './pages/Login' ).then( lazify ),
+  HydrateFallback : HydrateFallback,
+  ErrorBoundary : ErrorBoundary,
 }], { basename: '/carpeta_tributaria' });
 
 export default function Router() {
