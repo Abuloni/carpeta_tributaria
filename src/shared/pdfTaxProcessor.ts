@@ -256,7 +256,7 @@ function extractDebito(filatop: FilaTopRow[], filetxt: FileTxtRow[]): void {
     // Find line with '538' and 'TOTAL' and 'DÉBITOS'
     for (let i = row.fila; i < (row.filatop || filetxt.length); i++) {
       const line = filetxt.find(f => f.fila === i);
-      if (line && line.campo.includes(' 538 ') && 
+      if (line && ((line.campo.includes(' 538 ')) || (line.campo.startsWith('538 ')) ) && 
           line.campo.includes('TOTAL') && 
           line.campo.includes('DÉBITOS')) {
         
@@ -287,7 +287,7 @@ function extractCredito(filatop: FilaTopRow[], filetxt: FileTxtRow[]): void {
     // Find line with '520' and 'GIRO' and 'FACT'
     for (let i = row.fila; i < (row.filatop || filetxt.length); i++) {
       const line = filetxt.find(f => f.fila === i);
-      if (line && line.campo.includes(' 520 ') && 
+      if (line && ((line.campo.includes(' 520 ')) || (line.campo.startsWith('520 ')) ) && 
           line.campo.includes('GIRO') && 
           line.campo.includes('FACT')) {
         
@@ -324,7 +324,7 @@ function extractTotalCredito(filatop: FilaTopRow[], filetxt: FileTxtRow[]): void
     // Find line with '537' and 'CRÉDITOS' and 'TOTAL'
     for (let i = row.fila; i < (row.filatop || filetxt.length); i++) {
       const line = filetxt.find(f => f.fila === i);
-      if (line && line.campo.includes(' 537 ') && 
+      if (line && ((line.campo.includes(' 537 ')) || (line.campo.startsWith('537 ')) ) && 
           line.campo.includes('CRÉDITOS') && 
           line.campo.includes('TOTAL')) {
         
