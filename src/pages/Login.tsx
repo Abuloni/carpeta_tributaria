@@ -87,7 +87,7 @@ export default function Login() {
               value={formData.email}
               onChange={handleInputChange}
               disabled={isLoading}
-              placeholder="Enter your email"
+              placeholder="Ingrese su email"
               required
             />
           </div>
@@ -101,7 +101,7 @@ export default function Login() {
               value={formData.password}
               onChange={handleInputChange}
               disabled={isLoading}
-              placeholder="Enter your password"
+              placeholder="Ingrese su contraseña"
               required
             />
           </div>
@@ -122,7 +122,7 @@ export default function Login() {
         )}
       </div>
       <p className="read-the-docs">
-        Enter your credentials to access the application
+        Ingrese sus credenciales para acceder a la aplicación
       </p>
     </>
   )
